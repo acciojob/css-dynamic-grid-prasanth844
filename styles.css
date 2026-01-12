@@ -1,1 +1,29 @@
 /*  your css code here. If applicable */
+/* Container styling */
+.grid-container {
+  display: grid;
+  /* Automatically fits as many columns as possible, at least 200px wide */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  
+  /* Centering the grid content itself if it doesn't fill the full width */
+  justify-content: center;
+}
+
+/* Individual Grid Item styling */
+.grid-item {
+  background-color: lightgray;
+  height: 150px;
+  width: 200px;
+  border-radius: 5px;
+  font-size: 40px;
+
+  /* Centering the text inside the grid-item using Flexbox */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* Optional: Ensures items don't look squashed on very small screens */
+  margin: 0 auto;
+}
